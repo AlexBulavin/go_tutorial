@@ -16,7 +16,7 @@ func main() {
 	outString := fmt.Sprintf("our string: %T", hello) //Вывели тип переменной hello
 	fmt.Println(outString)
 
-	fmt.Printf("Type: %T Value %v\n", hello, hello)
+	fmt.Printf("Type: %T Value %v\n", hello, hello) //Выводим тип и значение переменной
 
 	fmt.Println(unsafe.Sizeof(1))
 	fmt.Println(unsafe.Sizeof(uint8(1)))
