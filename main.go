@@ -1,6 +1,9 @@
 package main
 
-import "fmt" //Импортируем пакет fmt - format
+import (
+	"fmt"
+	"unsafe"
+) //Импортируем пакет fmt - format
 
 func main() {
 	var hello string
@@ -12,5 +15,14 @@ func main() {
 
 	outString := fmt.Sprintf("our string: %T", hello) //Вывели тип переменной hello
 	fmt.Println(outString)
-	fmt.Println()
+
+	fmt.Printf("Type: %T Value %v\n", hello, hello)
+
+	fmt.Println(unsafe.Sizeof(1))
+	fmt.Println(unsafe.Sizeof(uint8(1)))
+	fmt.Println(unsafe.Sizeof(int8(1)))
+	fmt.Println(unsafe.Sizeof(int32(1)))
+	fmt.Println(unsafe.Sizeof("hello"))
+	fmt.Println(unsafe.Sizeof(true))
+
 }
